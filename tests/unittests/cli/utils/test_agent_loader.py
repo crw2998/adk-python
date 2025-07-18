@@ -58,8 +58,8 @@ class TestAgentLoader:
                 from typing import Any
 
                 class {agent_name.title()}Agent(BaseAgent):
-                    agent_id: Any | None = None
-                    config: Any | None = None
+                    agent_id: Any = None
+                    config: Any = None
 
                     def __init__(self):
                         super().__init__(name="{agent_name}")
@@ -82,8 +82,8 @@ class TestAgentLoader:
                 from typing import Any
 
                 class {agent_name.title()}Agent(BaseAgent):
-                    agent_id: Any | None = None
-                    config: Any | None = None
+                    agent_id: Any = None
+                    config: Any = None
 
                     def __init__(self):
                         super().__init__(name="{agent_name}")
@@ -110,8 +110,8 @@ class TestAgentLoader:
                 from typing import Any
 
                 class {agent_name.title()}Agent(BaseAgent):
-                    agent_id: Any | None = None
-                    config: Any | None = None
+                    agent_id: Any = None
+                    config: Any = None
 
                     def __init__(self):
                         super().__init__(name="{agent_name}")

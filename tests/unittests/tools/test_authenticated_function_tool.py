@@ -64,7 +64,7 @@ async def async_function_with_both(
 
 
 def function_with_optional_args(
-    arg1: str, arg2: str = "default", credential: AuthCredential | None = None
+    arg1: str, arg2: str = "default", credential: AuthCredential = None
 ) -> str:
   """Test function with optional arguments."""
   cred_type = credential.auth_type.value if credential else "none"

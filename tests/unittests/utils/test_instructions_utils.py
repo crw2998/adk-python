@@ -21,8 +21,8 @@ class MockArtifactService:
 
 
 async def _create_test_readonly_context(
-    state: dict | None = None,
-    artifact_service: MockArtifactService | None = None,
+    state: dict = None,
+    artifact_service: MockArtifactService = None,
     app_name: str = "test_app",
     user_id: str = "test_user",
     session_id: str = "test_session_id",
