@@ -44,7 +44,7 @@ class BaseAuthenticatedTool(BaseTool):
       *,
       name,
       description,
-      auth_config: AuthConfig = None,
+      auth_config: Optional[AuthConfig] = None,
       response_for_auth_required: Optional[Union[dict[str, Any], str]] = None,
   ):
     """

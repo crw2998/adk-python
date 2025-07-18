@@ -61,7 +61,7 @@ class ModelContent(types.Content):
 async def create_invocation_context(
     agent: Agent,
     user_content: str = '',
-    run_config: RunConfig = None,
+    run_config: RunConfig | None = None,
     plugins: list[BasePlugin] = [],
 ):
   invocation_id = 'test_id'
@@ -216,7 +216,7 @@ class InMemoryRunner:
     return events
 
   def run_live(
-      self, live_request_queue: LiveRequestQueue, run_config: RunConfig = None
+      self, live_request_queue: LiveRequestQueue, run_config: RunConfig | None = None
   ) -> list[Event]:
     collected_responses = []
 

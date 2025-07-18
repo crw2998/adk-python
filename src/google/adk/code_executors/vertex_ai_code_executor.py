@@ -86,7 +86,7 @@ Total columns: {df.shape[1]}
 '''
 
 
-def _get_code_interpreter_extension(resource_name: str = None):
+def _get_code_interpreter_extension(resource_name: Optional[str] = None):
   """Returns: Load or create the code interpreter extension."""
   if not resource_name:
     resource_name = os.environ.get('CODE_INTERPRETER_EXTENSION_NAME')
@@ -112,7 +112,7 @@ class VertexAiCodeExecutor(BaseCodeExecutor):
       projects/123/locations/us-central1/extensions/456
   """
 
-  resource_name: str = None
+  resource_name: Optional[str] = None
   """
   If set, load the existing resource name of the code interpreter extension
   instead of creating a new one.
@@ -123,7 +123,7 @@ class VertexAiCodeExecutor(BaseCodeExecutor):
 
   def __init__(
       self,
-      resource_name: str = None,
+      resource_name: Optional[str] = None,
       **data,
   ):
     """Initializes the VertexAiCodeExecutor.

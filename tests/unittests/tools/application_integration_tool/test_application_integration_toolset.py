@@ -56,7 +56,7 @@ def mock_openapi_toolset():
     mock_rest_api_tool.name = "Test Tool"
 
     # Create an async mock for the get_tools method
-    async def mock_get_tools(context: ReadonlyContext = None):
+    async def mock_get_tools(context: ReadonlyContext | None = None):
       return [mock_rest_api_tool]
 
     # Assign the async mock function to get_tools
@@ -78,7 +78,7 @@ def mock_openapi_toolset_with_multiple_tools_and_no_tools():
     mock_rest_api_tool_2.name = "Test Tool 2"
 
     # Create an async mock for the get_tools method
-    async def mock_get_tools(context: ReadonlyContext = None):
+    async def mock_get_tools(context: ReadonlyContext | None = None):
       return [mock_rest_api_tool, mock_rest_api_tool_2]
 
     mock_toolset_instance.get_tools = mock_get_tools

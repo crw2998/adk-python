@@ -48,7 +48,7 @@ class TestBigQueryTool:
     authenticated credentials to perform its work.
     """
 
-    def sample_func(param1: str, credentials: Credentials = None) -> dict:
+    def sample_func(param1: str, credentials: Credentials | None = None) -> dict:
       """Sample function that uses Google API credentials."""
       if credentials:
         return {"result": f"Success with {param1}", "authenticated": True}
@@ -62,7 +62,7 @@ class TestBigQueryTool:
     """Create an async sample function for testing async execution paths."""
 
     async def async_sample_func(
-        param1: str, credentials: Credentials = None
+        param1: str, credentials: Credentials | None = None
     ) -> dict:
       """Async sample function that uses Google API credentials."""
       if credentials:
@@ -223,7 +223,7 @@ class TestBigQueryTool:
     error responses rather than letting exceptions propagate.
     """
 
-    def failing_function(param1: str, credentials: Credentials = None) -> dict:
+    def failing_function(param1: str, credentials: Credentials | None = None) -> dict:
       raise ValueError("Something went wrong")
 
     tool = BigQueryTool(
@@ -254,7 +254,7 @@ class TestBigQueryTool:
     def complex_function(
         required_param: str,
         optional_param: str = "default",
-        credentials: Credentials = None,
+        credentials: Credentials | None = None,
     ) -> dict:
       return {"success": True}
 
